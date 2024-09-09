@@ -51,4 +51,8 @@ public class Invoice {
         this.items = items;
     }
 
+    public int getTotal() {
+        return items.stream().mapToInt(Item::getImporte).sum();
+    }
+
 }
